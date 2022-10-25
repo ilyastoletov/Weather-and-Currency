@@ -29,6 +29,7 @@ class CryptoFragment : Fragment() {
             .baseUrl("")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+            .create<ApiServices>(ApiServices::class.java)
 
 
         val recyclerView: RecyclerView = view.findViewById(R.id.rvCurrency)
