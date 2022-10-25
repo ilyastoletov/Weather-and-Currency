@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         val btNav: BottomNavigationView = binding.navMainView
         val navControllerFragment = supportFragmentManager.findFragmentById(R.id.nav_controller_fragment) as NavHostFragment
         navController = navControllerFragment.navController
-
         val appBarConf = AppBarConfiguration(setOf(
             R.id.nav_weather, R.id.nav_crypto
         ))
