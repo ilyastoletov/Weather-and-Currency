@@ -1,5 +1,6 @@
 package com.ilyusha.useful2.recyclers
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ilyusha.useful2.R
 
-class CurrencyAdapter(val currencies: ArrayList<Currency>) :
-    RecyclerView.Adapter<CurrencyAdapter.CurrencyHolder>() {
+class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.CurrencyHolder>() {
+
+    var currencies: ArrayList<Currency> = arrayListOf(Currency(R.drawable.bitcoin, "Bitcoin", "23 901 $"))
 
     class CurrencyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val currencyImage: ImageView = itemView.findViewById(R.id.iv_main_currency)
@@ -33,6 +35,12 @@ class CurrencyAdapter(val currencies: ArrayList<Currency>) :
         holder.currencyImage.setImageResource(currencies[position].imageId)
         holder.currencyName.text = currencies[position].title
         holder.course.text = currencies[position].price
+    }
+
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setList(list: ArrayList<Currency>) {
+        currencies = list
     }
 
 }
