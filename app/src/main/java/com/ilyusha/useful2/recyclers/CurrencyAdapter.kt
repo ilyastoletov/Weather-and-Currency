@@ -11,7 +11,7 @@ import com.ilyusha.useful2.R
 
 class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.CurrencyHolder>() {
 
-    var currencies: ArrayList<Currency> = arrayListOf(Currency(R.drawable.bitcoin, "Bitcoin", "23 901 $"))
+    var currencies: ArrayList<Currency> = arrayListOf(Currency(R.drawable.loading, "Загрузка...", ""))
 
     class CurrencyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val currencyImage: ImageView = itemView.findViewById(R.id.iv_main_currency)

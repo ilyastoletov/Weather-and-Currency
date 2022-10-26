@@ -1,4 +1,4 @@
-package com.ilyusha.useful2.data.api
+package com.ilyusha.useful2.data.api.crypto
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

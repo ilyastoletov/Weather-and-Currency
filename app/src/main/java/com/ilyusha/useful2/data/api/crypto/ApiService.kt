@@ -1,4 +1,4 @@
-package com.ilyusha.useful2.data.api
+package com.ilyusha.useful2.data.api.crypto
 
 import com.ilyusha.useful2.data.api.models.crypto.Crypto
 import com.ilyusha.useful2.data.api.models.crypto.CryptoList

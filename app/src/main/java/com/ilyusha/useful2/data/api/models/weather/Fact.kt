@@ -1,0 +1,30 @@
+package com.ilyusha.useful2.data.api.models.weather
+
+data class Fact(
+    val accum_prec: AccumPrec,
+    val cloudness: Number,
+    val condition: String,
+    val daytime: String,
+    val feels_like: Number,
+    val humidity: Number,
+    val icon: String,
+    val is_thunder: Boolean,
+    val obs_time: Number,
+    val polar: Boolean,
+    val prec_prob: Number,
+    val prec_strength: Number,
+    val prec_type: Number,
+    val pressure_mm: Number,
+    val pressure_pa: Number,
+    val season: String,
+    val soil_moisture: Number,
+    val soil_temp: Number,
+    val source: String,
+    val temp: Number,
+    val temp_water: Number,
+    val uptime: Number,
+    val uv_index: Number,
+    val wind_dir: String,
+    val wind_gust: Number,
+    val wind_speed: Number
+)
