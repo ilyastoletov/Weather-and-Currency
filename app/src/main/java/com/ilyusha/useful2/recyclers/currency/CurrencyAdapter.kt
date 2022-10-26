@@ -1,4 +1,4 @@
-package com.ilyusha.useful2.recyclers
+package com.ilyusha.useful2.recyclers.currency
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

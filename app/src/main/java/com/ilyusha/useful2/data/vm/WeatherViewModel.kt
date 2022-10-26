@@ -4,14 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ilyusha.useful2.data.api.models.crypto.Crypto
+import com.ilyusha.useful2.R
 import com.ilyusha.useful2.data.api.models.weather.Condition
-import com.ilyusha.useful2.data.api.models.weather.Weather
 import com.ilyusha.useful2.data.repositories.WeatherRepository
-import com.ilyusha.useful2.data.utils.Condition
-import com.ilyusha.useful2.data.utils.ConditionState
 import kotlinx.coroutines.launch
-import retrofit2.Response
 
 class WeatherViewModel: ViewModel() {
 
@@ -32,8 +28,18 @@ class WeatherViewModel: ViewModel() {
     }
 
     fun getCondition(condition: String): Condition {
+        println(condition)
         return when(condition) {
-            "rain" -> Condition("Дождь")
+            "clear" -> Condition("Ясно", R.drawable.sunny)
+            "partly-cloudy" -> Condition("Облачно с прояснениями", R.drawable.clear_cloudy)
+            "cloudy", "overcast" -> Condition("Облачно", R.drawable.cloudy)
+            "light-rain", "rain" -> Condition("Морось", R.drawable.small_rain_with_sun)
+            "heavy-rain", "continuous-heavy-rain", "showers" -> Condition("Сильный дождь", R.drawable.showers)
+            "light-snow", "snow" -> Condition("Снег", R.drawable.small_snow)
+            "snow-showers" -> Condition("Снегопад", R.drawable.snow)
+            "hail" -> Condition("Град", R.drawable.hail)
+            "thunderstorm", "thunderstorm-with-rain", "thunderstorm-with-hail" -> Condition("Гроза", R.drawable.thunderstroms)
+            else -> Condition("Ошибка", R.drawable.sunny)
         }
     }
 }

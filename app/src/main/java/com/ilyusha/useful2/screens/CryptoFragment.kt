@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ilyusha.useful2.R
 import com.ilyusha.useful2.data.vm.CryptoViewModel
 import com.ilyusha.useful2.databinding.FragmentCryptoBinding
-import com.ilyusha.useful2.recyclers.Currency
-import com.ilyusha.useful2.recyclers.CurrencyAdapter
+import com.ilyusha.useful2.recyclers.currency.Currency
+import com.ilyusha.useful2.recyclers.currency.CurrencyAdapter
 
 class CryptoFragment : Fragment() {
 

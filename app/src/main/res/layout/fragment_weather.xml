@@ -42,15 +42,25 @@
                 android:src="@drawable/pencil" />
         </LinearLayout>
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="15sp"
-            android:fontFamily="@font/medium"
-            android:text="Облачно с прояснениями"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="1dp"
+                android:fontFamily="@font/medium"
+                android:text="@{vm.weatherCondition.conditionTitle}"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -60,9 +70,9 @@
 
             <ImageView
                 android:id="@+id/condition_picture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/clear_cloudy" />
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:sourceImg="@{vm.weatherCondition}"/>
 
             <TextView
                 android:id="@+id/main_temperature_text"
