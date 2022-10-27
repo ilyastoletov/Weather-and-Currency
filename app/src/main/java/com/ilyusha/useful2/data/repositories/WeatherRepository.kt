@@ -13,7 +13,6 @@ class WeatherRepository {
     }
 
     suspend fun getCurrencies(): Response<CurrencyData> {
-        println(CurrenciesRetrofitInstance.curreniesApi.getCurrencies().body())
         return CurrenciesRetrofitInstance.curreniesApi.getCurrencies()
     }
 

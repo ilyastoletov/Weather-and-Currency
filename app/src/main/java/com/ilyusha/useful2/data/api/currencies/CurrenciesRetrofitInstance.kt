@@ -8,7 +8,7 @@ object CurrenciesRetrofitInstance {
 
     val curreniesApi by lazy {
         Retrofit.Builder()
-            .baseUrl("https://currate.ru/api/")
+            .baseUrl("https://iss.moex.com/iss/statistics/engines/currency/markets/selt/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CurreniesApiService::class.java)

@@ -42,8 +42,8 @@ class WeatherViewModel: ViewModel() {
     fun getCurrenciesCourse() {
         viewModelScope.launch {
             val response = repo.getCurrencies().body()!!
-            _dollarCourse.value = response.data.USDRUB.dropLast(2) + " ₽"
-            _euroCourse.value = response.data.EURRUB.dropLast(1) + " ₽"
+            _dollarCourse.value = response.wap_rates.data[0][4].toString().dropLast(2) + " ₽"
+            _euroCourse.value = response.wap_rates.data[1][4].toString().dropLast(2) + " ₽"
         }
     }
 

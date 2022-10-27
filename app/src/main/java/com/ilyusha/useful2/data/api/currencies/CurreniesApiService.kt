@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface CurreniesApiService {
 
-    @GET("?get=rates&pairs=USDRUB,EURRUB&key=d6d31827c7b276ac7f9f8d2666439121")
+    @GET("rates.json?iss.meta=off")
     suspend fun getCurrencies(): Response<CurrencyData>
 
 }
