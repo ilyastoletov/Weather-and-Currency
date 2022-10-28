@@ -1,6 +1,6 @@
-package com.ilyusha.useful2.data.api.currencies
+package com.ilyusha.useful2.data.api.clients.currencies
 
-import com.ilyusha.useful2.data.api.weather.WeatherApiService
+import com.ilyusha.useful2.data.api.clients.weather.WeatherApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

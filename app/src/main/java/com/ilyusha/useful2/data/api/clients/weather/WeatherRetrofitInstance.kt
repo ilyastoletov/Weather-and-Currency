@@ -1,6 +1,6 @@
-package com.ilyusha.useful2.data.api.weather
+package com.ilyusha.useful2.data.api.clients.weather
 
-import com.ilyusha.useful2.data.api.crypto.ApiService
+import com.ilyusha.useful2.data.api.clients.crypto.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

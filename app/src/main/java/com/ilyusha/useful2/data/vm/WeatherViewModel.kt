@@ -29,9 +29,9 @@ class WeatherViewModel: ViewModel() {
     var dollarCourse: LiveData<String> = _dollarCourse
     var euroCourse: LiveData<String> = _euroCourse
 
-    fun getWeatherTogliatti() {
+    fun getWeatherByCity(lat: Double, lon: Double) {
         viewModelScope.launch {
-            val responseBody = repo.getWeatherTogliatti().body()!!
+            val responseBody = repo.getWeatherByCityName(lat, lon).body()!!
             weatherResponse.value = responseBody
             weatherHoursPrediction.value = getHoursPrediction()
             _weatherDegrees.value = responseBody.fact.temp.toString() + "°C"
@@ -75,4 +75,9 @@ class WeatherViewModel: ViewModel() {
         hourPrediction.add(WeatherData("29:00", R.drawable.sunny, "br"))
         return hourPrediction
     }
+
+    fun getCityWeather(city: String) {
+        println(repo.getCityName(city).request().body())
+    }
+
 }

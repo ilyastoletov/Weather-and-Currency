@@ -1,4 +1,4 @@
-package com.ilyusha.useful2.data.api.currencies
+package com.ilyusha.useful2.data.api.clients.currencies
 
 import com.ilyusha.useful2.data.api.models.currencies.CurrencyData
 import retrofit2.Response
