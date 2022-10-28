@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/grey_main" />
     <item>
-        <bitmap android:src="@drawable/litecoin"
+        <bitmap android:src="@drawable/weather_frg"
             android:gravity="center"/>
     </item>
 </layer-list>
