@@ -77,7 +77,14 @@ class WeatherViewModel: ViewModel() {
     }
 
     fun getCityWeather(city: String) {
-        println(repo.getCityName(city).request().body())
+        when (city) {
+            "Тольятти" -> getWeatherByCity(53.5303, 49.3461)
+            "Волгоград" -> getWeatherByCity(48.7194, 44.5018)
+            "Москва" -> getWeatherByCity(55.7522, 37.6156)
+            "Воронеж" -> getWeatherByCity(51.672, 39.1843)
+            "Пенза" -> getWeatherByCity(53.2007, 45.0046)
+            "Омск" -> getWeatherByCity(54.9924, 73.3686)
+        }
     }
 
 }

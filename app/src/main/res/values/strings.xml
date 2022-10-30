@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Погода и Валюта</string>
+    <string-array name="city_names">
+        <item>Тольятти</item>
+        <item>Москва</item>
+        <item>Воронеж</item>
+        <item>Волгоград</item>
+        <item>Пенза</item>
+        <item>Омск</item>
+    </string-array>
 </resources>

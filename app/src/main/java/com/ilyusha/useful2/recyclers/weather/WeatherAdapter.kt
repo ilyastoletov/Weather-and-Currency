@@ -30,9 +30,7 @@ class WeatherAdapter(): RecyclerView.Adapter<WeatherAdapter.WeatherHolder>() {
         holder.tempText.text = weathers[position].temp
     }
 
-    override fun getItemCount(): Int {
-        return weathers.size
-    }
+    override fun getItemCount() = weathers.size
 
     @SuppressLint("NotifyDataSetChanged")
     fun changeListWeather(list: ArrayList<WeatherData>) {

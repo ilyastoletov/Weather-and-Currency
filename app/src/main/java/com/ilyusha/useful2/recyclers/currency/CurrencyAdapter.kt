@@ -27,9 +27,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.CurrencyHolder>() {
     }
 
 
-    override fun getItemCount(): Int {
-        return currencies.size
-    }
+    override fun getItemCount() = currencies.size
 
     override fun onBindViewHolder(holder: CurrencyHolder, position: Int) {
         holder.currencyImage.setImageResource(currencies[position].imageId)
