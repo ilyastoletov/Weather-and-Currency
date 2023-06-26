@@ -8,3 +8,5 @@
 ЯП: Kotlin
 IDE: Android Studio
 Библиотеки: Retrofit2, MVVM, RecyclerView, BottomNavigationView
+
+![image](https://github.com/nagibator-hero/Weather-and-Currency/assets/112814993/20dbbf01-2837-4e7b-a546-30b70e94a573)
